@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: 0.2s linear;
+  font-family: "Baloo 2", cursive;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FA8258;
+  padding: 1rem 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5px 1rem rgb(61, 61, 61);
+}
+
+.head #toggler {
+  display: none;
+}
+
+.head .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.head .logo {
+  width: 100px;
+  margin-left: 40px;
+}
+
+.head .menu a {
+  text-decoration: none;
+  padding: 0 1.5rem;
+  color: #2e2552;
+  font-size: 2rem;
+}
+
+.head .menu a:hover {
+  color: white;
+}
+
+* .icon {
+  margin-right: 50px;
+}
+
+.icon a {
+  font-size: 30px;
+  color: #2e2552;
+  padding: 0 10px;
+} *
+
+.icons a {
+  float: left;
+  font-size: 2.5rem;
+  color: #2e2552;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: white;
+}
+
+.nut_dropdown i:hover {
+  color: white;
+}
+
+.icons {
+  overflow: hidden;
+}
+
+.drop {
+  float: left;
+  overflow: hidden;
+}
+
+.drop .nut_dropdown {
+  font-size: 2.5rem;
+  border: none;
+  outline: none;
+  color: #2e2552;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.dropdown-noidung {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-noidung a {
+  position: relative;
+  float: none;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-noidung a:hover {
+  background-color: #ddd;
+}
+
+.drop:hover .dropdown-noidung {
+  display: block;
+}
+
+
+
+.card {
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+
+.center img {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  height: 200px;
+  width:  400px;
+  margin: 20px 0px
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600px;
+  line-height: 1.2;
+}
+
+h4,h6 {
+  font-weight: 500px;
+}
+
+.h5 {
+  font-size: 2rem;
+}
+
+.center{
+    text-align: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #333;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer .box-container .box {
+  flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+  color: whitesmoke;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+  display: block;
+  color: rgb(224, 223, 223);
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  text-decoration: none;
+}
+
+.footer .box-container .box div a:hover {
+  color: #dd262a;
+}
+
+.footer .cre {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  color: rgb(224, 223, 223);
+  border-top: 1px solid #999;
+}
+
+/* media res*/
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .head {
+    padding: 2rem;
+  }
+
+  .home {
+    padding: 2rem;
+    background-position: left;
+  }
+
+  .head .fa-bars {
+    display: block;
+  }
+
+  .head .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .head #toggler:checked ~ .menu {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .head .menu a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .head .fa-bars {
+    display: block;
+  }
+
+  .head .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .head #toggler:checked ~ .menu {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .head .menu a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+
+  .home .texthome h3 {
+    font-size: 5rem;
+  }
+
+  .home .texthome span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .head {
+    padding: 2rem;
+  }
+
+  .head .logo {
+    width: 20rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+}
